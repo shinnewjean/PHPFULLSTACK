@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td{
+            border: 1px solid black;
+        }
+
+        /* .col1 {
+            background-color: yellow;
+        }
+        .col2{
+            background-color: green;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <table>
+        <caption>반 성적</caption>
+        <tr>
+            <th>1반</th>
+            <td>90점</td>
+            <td>80점</td>
+        </tr>
+        <tr>
+            <th>2반</th>
+            <td>80점</td>
+            <td>90점</td>
+        </tr>
+    <table> -->
+            <!-- <caption>반 성적</caption>
+            <thead>
+            <tr>
+                <th>1반</th>
+                <th>2반</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>80점</td>
+                <td>90점</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>80점</td>
+                <td>90점</td>
+            </tr>
+        </tfoot>
+    </table> -->
+    <table>
+        <caption>학급 성적표</caption>
+        <!-- <colgroup>
+            <col class="col1">
+            <col class="col2">
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup> -->
+        <tr>
+            <th>반</th>
+            <th>이름</th>
+            <th>국</th>
+            <th>영</th>
+            <th>수</th>
+            <th>과</th>
+        </tr>
+        <tr>
+            <td rowspan="2">1반</td>
+            <td>홍길동</td>
+            <td>100</td>
+            <td>80</td>
+            <td>90</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <!-- <td>1반</td> -->
+            <td>김철수</td>
+            <td>80</td>
+            <td>100</td>
+            <td>90</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td colspan="2">평균</td>
+            <!-- <td></td> -->
+            <td>80.5</td>
+            <td>80.5</td>
+            <td>90.5</td>
+            <td>75.5
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

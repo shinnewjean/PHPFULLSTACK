@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제 2</title>
+    <style>
+        #container{
+            width: 520px;
+            border: 1px solid black;
+            padding: 20px 40px;
+            margin:0 auto;
+        }
+        fieldset{margin-bottom: 0px;}
+        legend{font-weight: bold;}
+        ul{list-style-type: none;}
+        li{line-height:30px ;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>프런트엔드 개발자 지원서</h1>
+        <p>HTML, CSS, 자바스크립트의 기술을 이해하고</p>
+        <hr>
+        
+        <form action="">
+        <!-- <fieldset> -->
+            <br>
+            <h4>개인정보</h4>
+            <ul>
+                <!-- ul>li, div,로 가시성 -->
+                <li>
+                    <label for="name" >이름</label>
+                    <input type="text" id="name" name="name" placeholder="공백 없이" required>
+                </li>
+                <li>
+                    <label for="number">연락처</label>
+                    <input type="tel" id="number" name="phonenumber" required>
+                </li>
+            </ul>
+
+            <strong>지원분야</strong>
+            <!-- strong은 접근성(화면낭독기의 강조)을 위한태그 -->
+            <ul>
+                <li>
+                    <!-- <input type="radio" id="r_1" name="A" required>
+                    <label for="r_1">웹 퍼블리싱</label> -->
+                    <label><input type="radio" name="A" value="webp"> 웹 퍼블리싱</label>
+                    <!-- 라벨태그 안에 인풋태그 암시적으로 적은 방법, 되도록이면 명시적으로 적어주세요  -->
+                </li>
+                <li>
+                    <input type="radio" id="r_2" name="A">
+                    <label for="r_2">웹 애플리케이션 개발</label>
+                </li>
+                <li>
+                    <input type="radio" id="r_3" name="A">
+                    <label for="r_3">웹 개발환경 개선</label>
+                </li>
+            </ul>
+            
+            <b>지원동기</b>
+            <ul>
+                    <label for="motive" ></label>
+                    <textarea name="text" id="motive" cols="15" rows="5" maxlength="60"  placeholder="문서 지원 동기"></textarea>
+            </ul>
+
+            <input type="submit" value="접수하기">
+            <input type="reset" value="취소하기">
+            <br>
+            <button type="submit">접수하기</button>
+            <button type="reset">취소하기</button>
+        <!-- </fieldset> -->
+        </form>
+
+    </div>    
+</body>
+</html>

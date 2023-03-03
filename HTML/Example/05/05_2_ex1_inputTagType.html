@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border: 1px solid rgba(2, 0, 2, 0);
+            background-color: rgba(231, 250, 225, 0.521);
+        }
+
+        ul{
+            border: 1px solid rgb(2, 0, 2);
+            background-color: rgba(182, 253, 161, 0.493);
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>메뉴 선택</legend>
+
+            <label for="id">이 름</label>
+            <input type="text" autofocus placeholder="10자까지 입력해주세요." maxlength="10" required>
+            
+            <br>
+            <label for="pw">회원번호</label>
+            <input type="password" required>
+
+            <br>
+            <label for="readonly">참조사항</label>
+            <input type="text" readonly value="오늘 메뉴 생각중입니다.">
+
+            <br>
+            <br>
+            <ul>
+                <li>
+                    <label for="tel">짜장면</label>
+                    <input checked type="checkbox" name="sb" id="sb">
+                </li>
+                <li>
+                    <label for="tel">짬뽕</label>
+                    <input type="checkbox" name="banana" id="banana">
+                </li>
+                <li>
+                    <label for="tel">마라탕</label>
+                    <input type="checkbox" name="wm" id="wm">
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <label for="tel">마라샹궈</label>
+                    <input checked type="radio" name="fruit" id="r_sb">
+                </li>
+                <li>
+                    <label for="tel">유린기</label>
+                    <input type="radio" name="fruit" id="r_banana">
+                </li>
+                <li>
+                    <label for="tel">탕수육</label>
+                    <input type="radio" name="fruit" id="r_wm">
+                </li>
+            </ul>
+
+            <br>
+            <input type="submit">
+
+        </fieldset>
+
+    </form>
+</body>
+</html>

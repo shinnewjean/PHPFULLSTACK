@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="데이터를 받아줄 서버 URL"></form> -->
+    <form action="" >
+
+    </form>
+
+    <fieldset>
+        <legend>고객 정보</legend>
+        <!-- 라벨의 명시적 표기 이방법을 권장 암시적으로 하면 옛날것은 가끔 에러 -->
+        <label for="ID">ID</label>
+        <input type="text" name="ID" id="ID" maxlength="10" size="10">
+        <!-- 붉은 for=과 id=는 항상 입력값 같아야한다 -->
+        <!-- name 중복가능 id는 고유한 값 -->
+        <!-- 라벨의 암시적 표기 -->
+        <!-- <label>
+            ID_1
+            <input type="text" name="id_1" id="id_1">
+        </label> -->
+         <br>
+        <label for="PW">PW</label>
+        <input type="password" name="PW" id="PW" size="15">
+        <!-- input은 많은 속성값이 있다. -->
+
+        <!-- <br>
+        <label for="search">search</label>
+        <input type="search" name="search" id="search">
+
+        <br>
+        <label for="URL">URL</label>
+        <input type="URL" name="URL" id="URL">
+
+        <br>
+        <label for="email">email</label>
+        <input type="email" name="email" id="email">
+
+        <br>
+        <label for="tel">tel</label>
+        <input type="tel" name="tel" id="tel">
+
+        <br> -->
+        <!-- <div>
+            <label for="tel">딸기</label>
+            <input type="checkbox" name="sb" id="sb">
+            <label for="tel">바나나</label>
+            <input type="checkbox" name="banana" id="banana">
+            <label for="tel">수박</label>
+            <input type="checkbox" name="wm" id="wm">
+        </div> -->
+        <!-- <ul>
+            <li>
+                <label for="tel">딸기</label>
+                <input value="sb" type="checkbox" name="sb" id="sb"> -->
+                <!-- value의 세팅값이 백엔드로 넘어감 -->
+            <!-- </li>
+            <li>
+                <label for="tel">바나나</label>
+                <input value="ba" type="checkbox" name="banana" id="banana">
+            </li>
+            <li>
+                <label for="tel">수박</label>
+                <input value="wm" type="checkbox" name="wm" id="wm">
+            </li>
+        </ul> -->
+        <!-- <ul>
+            <li>
+                <label for="tel">딸기</label>
+                <input type="radio" name="fruit" id="r_sb">
+            </li>
+            <li>
+                <label for="tel">바나나</label>
+                <input type="radio" name="fruit" id="r_banana">
+            </li>
+            <li>
+                <label for="tel">수박</label>
+                <input type="radio" name="fruit" id="r_wm"> -->
+            </li>
+        </ul>
+        <!-- <br>
+        <label for="number">number</label>
+        <input type="number" value="0" min="0" max="5"> -->
+        <!-- value초기값을 세팅하는 것 min max -->
+        <!-- <br>
+        <label for="range">range</label>
+        <input type="range" value="0" min="0" max="10">
+        <br>
+        <br>
+        <label for="date">date</label>
+        <input type="date" min="2023-03-01" max="2023-03-10"> -->
+
+        <br>
+        <br>
+        <label for="submit"></label>
+        <input type="submit" value="submit">
+
+        <br>
+        <br>
+        <label for="reset"></label>
+        <input type="reset" >
+
+        <br>
+        <br>
+        <label for="button"></label>
+        <input type="button" value="button">
+
+        <br>
+        <br>
+        <input type="hidden" value="hidden_1">
+        <!-- 화면에는 표시되지않지만 숨겨서하는 이유 예를 들어 페이지정보, 이전페이지와 중복되는 내용 -->
+
+
+        <br>
+        <br>
+        <button>OK</button>
+
+
+    </fieldset>
+    <fieldset>
+        <legend>배송 정보</legend>
+    </fieldset>
+    
+    
+    <label for="ID">ID</label>
+    <input type="text" name="ID" id="ID" maxlength="10" size="10">
+</body>
+</html>
