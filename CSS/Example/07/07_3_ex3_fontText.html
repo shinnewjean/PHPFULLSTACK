@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h1_shadow{
+            /* text-shadow: 가로+오/-왼 세로+아래/-위 번짐정도 black; */
+            text-shadow: -5px -5px 5px gray;
+        }
+        .hl_tran{
+            /* text-transform: 텍스트 변환; */
+            text-transform: capitalize;
+            /* capitalize첫글자 대문자 uppercase모든문자 대문자 lowrcase모든문자 소문자 full-width모든문자 전각,사용빈도 적음 */
+        }
+        .hl_spacing{
+            letter-spacing: 30px;
+        }
+        .hl_w_spacing{
+            word-spacing: 30px;
+            /* 단어 간격 늘리기 하지만 현업사용 빈도 적음 letter-spacing 사용 */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h1_shadow">h1_shadow</h1>
+
+    <h1 class="hl_tran">hl_tran</h1>
+
+    <h1 class="hl_spacing">hl_spacing</h1>
+
+    <h1 class="hl_w_spacing">hl_word spacing html</h1>
+</body>
+</html>

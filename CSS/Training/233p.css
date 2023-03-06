@@ -1,0 +1,13 @@
+ul{
+    font-size: none;
+    line-height: 2em;
+}
+
+.span_red{
+    color: #ad3000;
+    font-weight: 900;
+}
+
+ul{
+    list-style-type: none;
+}
