@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container_1{
+            border: 1px solid #000;
+            margin: 20px;
+            /* 상하,좌우 /상 우 하 좌 */
+        }
+        .container_2{
+            border: 1px solid #000;
+            margin: 50px;
+            /* 세로만 마진 중첩현상(가로는 중첩 없음) 둘중 더큰 마진으로 진행 */
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container_1">
+        <h1>margin1</h1>
+        <p>외부 여백을 지정합니다.</p>
+    </div>
+
+    <div class="container_2">
+        <h1>margin2</h1>
+        <p>외부 여백을 지정합니다.</p>
+    </div>
+</body>
+</html>

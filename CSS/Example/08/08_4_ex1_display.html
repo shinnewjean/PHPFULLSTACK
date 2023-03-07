@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .art_1{
+            border: 3px solid red;
+            display: none;
+        }
+
+        .art_2{
+            border: 3px solid red;
+            display: inline-block;
+        }
+
+        div{
+            border: 3px solid blue;
+        }
+
+        span{
+            border: 3px solid red;
+        }
+
+        .art_2>div,
+        .art_2>apsn{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <article class="art_2">
+        <div>div Tag1</div>
+        <div>div Tag2</div>
+        <span>span1</span>
+        <span>span2</span>
+
+        <br>
+        <div class="wh">div Tag2</div>
+        <span class="wh">span1</span>
+
+        <br>
+    <!-- <article class="art_1">
+        <h1>Display None</h1>
+        <div>div Tag1</div>
+        <div>div Tag2</div>
+    </article> -->
+        <br>
+    <!-- block단위 -->
+    <!-- <div class="div_2">div Tag 2</div>
+    <h1>h1</h1>
+    <p>p</p> -->
+
+    <!-- inline레벨 요소 -->
+    <!-- <span>span</span>
+    <a href="">a</a> -->
+
+</body>
+</html>

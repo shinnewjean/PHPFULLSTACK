@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div_border{
+            border: 1px solid black;
+            /* 외곽선 두깨 solid실선 색상 */
+        }
+        .div_none{
+            border-style: none;
+            /* none기본값  */
+        }
+        
+        .div_solid{
+            border-style: solid;
+            /* 그외 두께 색상은 기본 설정값이므로 처음한 border보다 두꺼움  */
+            border-width: 5px 10px 15px 20px;
+            /* 외곽선두께 지정_ 위 오른쪽 아래 왼쪽 */
+            border-color: blue;
+            /* 색상 */
+            border-radius: none;
+            /* 모서리를 둥글게 10px 50% 2em
+            카카오톡 프로필 같이 원도 만들기 가능*/
+            border-top-left-radius: 10px;
+            /* 하나의 모서리만 변경 */
+        }
+        
+        .div_dotted{
+            border-style: dotted;
+        }
+
+        .div_dashed{
+            border-style: dashed;
+        }
+        
+        .div_double{
+            border-style: double;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_border">테두리(한번에)</div>
+    <br>
+
+    <div class="div_none">테두리(없음)</div>
+    <br>
+
+    <div class="div_solid">테두리(실선)</div>
+    <br>
+
+    <div class="div_dotted">테두리(점선)</div>
+    <br>
+
+    <div class="div_dashed">테두리(대쉬)</div>
+    <br>
+
+    <div class="div_double">테두리(이중선)</div>
+    <br>
+</body>
+</html>
