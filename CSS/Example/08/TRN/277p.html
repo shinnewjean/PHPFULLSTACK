@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>유진작품</title>
     <style>
         *{box-sizing: border-box;}
 
@@ -16,9 +16,12 @@
             height: 820px;
             border: 10px solid black;
             box-sizing: content-box;
+            box-shadow: 5px 5px 5px gray;
+            margin: 0;
         }
         .He,.Le,.Ma,.Ri,.Bo{
             border: 5px solid black;
+            /* margin: 0; */
         }
 
         .He{
@@ -39,6 +42,7 @@
             height: 600px;
             /* border: 1px solid black; */
             float: left;
+            position: relative;
         }
         .Ri{
             background-color: yellowgreen;
@@ -53,7 +57,24 @@
             /* border: 1px solid black; */
             clear: both;
         }
-
+        img{
+            box-shadow: 10px 10px 15px 5px #000;
+            position: absolute;
+            top: 300px;
+            left: 300px;
+            width: 50%;
+            z-index: 1;
+        }
+        #pos1{
+            font-size: 100px;
+            font-weight: 900;
+            color: white;
+            text-shadow: 10px 10px #000;
+            position: relative;
+            top: -800px;
+            left: 500px;
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
@@ -65,5 +86,16 @@
         <div class="Ri">사이드바 오른쪽</div>
         <div class="Bo">푸터</div>
     </div>
+
+
+    <!-- <header>해더</header>
+    <main>
+        <aside class="side_1">사이드바</aside>
+
+    </main> -->
+
+
+    <p id="pos1">window</p>
+    <img src="../img/A2.jpg" alt="">
 </body>
 </html>

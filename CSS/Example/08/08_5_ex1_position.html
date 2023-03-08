@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        *{box-sizing: content-box;
+        border: 1px solid black;
+        }
+
+        main,section,article{
+            padding: 20px;
+        }
+        main{
+            background-color: rgba(243, 50, 250, 0.301);
+        }
+        section{
+            background-color: rgba(0, 255, 179, 0.575);
+            /* position: relative; */
+            /* 포지션 릴레이티브의 기준점을 잡아준다 상위요소에만 적용가능 */
+        }
+        article{
+            background-color: rgba(205, 50, 122, 0.514);
+            height: 1000px;
+        }
+        .div_static{
+            background-color: rgba(255, 0, 0, 0.473);
+        }
+        .div_relative{
+            background-color: rgba(255, 166, 0, 0.534);
+            /* position: relative; */
+            /* top: 30px; */
+            /* bottom: 30px; */
+            /* right: 30px; */
+            /* left: -30px; */
+            
+        }
+        .div_absolute{
+            background-color: rgba(255, 255, 0, 0.452);
+            /* position: absolute; */
+            /* top: 0px; */
+        }
+        .div_fixed{
+            background-color: rgba(0, 128, 0, 0.466);
+            position: fixed;
+            /* top: 50px; */
+            /* bottom: 10px;
+            right: 20px; */
+            bottom: 10%;
+            right: 10%; 
+            /* ex)위로 올라가기 버튼 */
+        }
+        .div_sticky{
+            background-color: rgba(0, 0, 255, 0.459);
+            position: sticky;
+            /* 부모요소 필요 */
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        main
+        <section>
+            section
+            <article>
+                article
+                <div class="div_static">static</div>
+                <!-- 기본상태 -->
+                <div class="div_relative">relative</div>
+                <div class="div_absolute">absolute</div>
+                <div class="div_fixed">fixed</div>
+                <div class="div_sticky">sticky</div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
