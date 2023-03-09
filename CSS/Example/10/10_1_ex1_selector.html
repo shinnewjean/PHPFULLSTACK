@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+/* 선택자란? *전체선택자, 타입 태그명, 클래스 .,ID #,그룹 두개이상 */
+
+    /* 상위요소 하위요소 : 상위 요소에 포함된 모든 하위요소에 적용 */
+        header span{
+            color: aqua;
+        }
+    
+    /* 우선순위 ID>type style */
+        #span1{
+            color: brown;
+        }
+
+    /* 부모요소 자식요소 : 부모요소의 자식요소에게만 적용 */
+        header>span{
+            color: blue;
+        }
+
+    /* 형제요소 + 형제요소 : 인접한 형제요소 중 첫번째 형제 요소에 적용 */
+        /* 인접형제요소 : 현업에서 사용빈도 낮음 ,연속되는 경우에만 적용*/
+    div+span{
+            color: blueviolet;
+        }
+        span+p{
+            color: darkorange;
+        }
+
+    /* 형제요소 ~ 형제요소 : 설정된 모든 형제요소에 적용 */
+    .div3~span{
+        color: chartreuse;
+    }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span>header - div - span</span>
+        </div>
+        <span id="span1">header - span</span>
+    </header>
+    <span>span</span>
+    <br><br><br><br><br><br><br>
+
+    <main>
+        <div>
+            <span>header - div - span</span>
+        </div>
+        <span>header - span</span>
+        <p>header - p1</p>
+        <span>header - span</span>
+        <span>header - span</span>
+    </main>
+    <br><br><br><br><br><br><br>
+
+    <main>
+        <div class="div3">
+            <span>header - div - span</span>
+        </div>
+        <span>header - span</span>
+        <span>header - span</span>
+        <span>header - span</span>
+    </main>
+</body>
+</html>

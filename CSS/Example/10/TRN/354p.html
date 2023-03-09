@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        li{list-style: none;}
+
+        .mainMenuBar{
+            width: 605px;
+            overflow: hidden;
+            height: 30px;
+            box-shadow: 10px 10px 10px#555; 
+            padding: 0px;
+        }
+        .mainMenuBar li{
+            width: 16.6%;
+            float: left;
+            background-color: gray;
+            border-right: 1px solid black;
+            box-shadow: 10px 10px 10px#555;
+            text-align: center;
+            line-height: 30px;
+        }
+        li .m6{
+            border: none;
+        }
+        .m1_5:hover{
+            background-color: #555;
+            color: #fff;
+        }
+        .m6:hover{
+            background-color: #b30000;
+            color: #fff;
+        }
+        
+        /* .subMenu1 > li {
+            line-height: 50px;
+            background-color: #94a9ff;
+        }*/
+
+        /*ul의 높이를 안보이게 처리*/
+        /*.subMenu1 {
+            height: 0; 
+            /*overflow: hidden;
+        }
+        .mainMenuBar > li:hover {
+            background-color: #94a9ff;
+            transition-duration: 0.5s;
+        }
+        /*서브메뉴 li한개의 높이 50*5*/
+        /*.mainMenuBar > li:hover .subMenu1 {
+            height: 250px; 
+            /*transition-duration: 1s;
+        } */
+    </style>
+</head>
+<body>
+        <ul class="mainMenuBar">
+            <li class="m1_5">매뉴1</li>
+            <li class="m1_5">매뉴2</li>
+            <li class="m1_5">매뉴3</li>
+            <li class="m1_5">매뉴4</li>
+            <li class="m1_5">매뉴5</li>
+            <li class="m6">매뉴6</li>
+        </ul>
+        <!-- <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <ul class="subMenu1">
+            <li class="m1_5">매뉴1</li>
+            <li class="m1_5">매뉴2</li>
+            <li class="m1_5">매뉴3</li>
+            <li class="m1_5">매뉴4</li>
+            <li class="m1_5">매뉴5</li>
+            <li class="m6">매뉴6</li>
+        </ul> -->
+</body>
+</html>

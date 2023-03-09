@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+        *{box-sizing: border-box;
+        font-weight: 900; 
+        font-family: 'Dovemayo_gothic';
+        }
+        .title_1{
+            font-weight: 900;
+            color: red;
+            font-size: 50px;
+        }
+        .IWY_filed{
+            background-image: url(../img/10_ex1_2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 500px;
+            /* height: 500px; */
+            margin: auto;
+            padding: 20px;
+            position: relative;
+            border: 10px ridge purple;
+        }
+        .star::before{
+            content: "*";
+            color: red;
+        }
+        .container_input [class^=input]:focus{
+            outline: none;
+            border-radius: 5px;
+            border: 5px solid red;
+        }
+        .container_input [class^=input]{
+            background: none;
+        }
+        #input_Gender_male:checked+label, #input_Gender_female:checked+label {
+            color: red;
+            font-weight: bold;
+        }
+        .Request{
+            /* float: left;
+            margin-right: 10px; */
+            vertical-align: top;
+        }
+        .sendButton{
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset class="IWY_filed">
+            <legend class="title_1">I want YOU!</legend>
+                <div class="container_input">            
+                    <label class="star" for="name">이름</label>
+                    <input class="input_name" type="text" id="name" required>
+                    <br>
+                    <br>
+
+                    <label class="star" for="age">나이</label>
+                    <input class="input_age" type="number" id="age" min="20" required>
+                    <br>
+                    <br>
+            
+                    <label class="star" for="#">성별</label>
+                    <input type="radio" id="input_Gender_male" name="input1" required>
+                    <label for="input_Gender_male">남자</label>
+                    <input type="radio" id="input_Gender_female" name="input1">
+                    <label for="input_Gender_female">여자</label>
+                    <br>
+                    <br>
+            
+                    <label class="Request" for="Requested">요청사항</label>
+                    <textarea class="input_Request" placeholder="요청 사항 입력" name="Requested" id="Requested" cols="30" rows="10" required></textarea>
+                    <br>
+                    <br>
+                </div>
+                <div class="sendButton" title="내용을 다시 한번 확인해 주세요.">
+                    <input " class="send" type="submit" value="보내기">
+                </div>
+        </fieldset>
+    </form>
+</body>
+</html>
