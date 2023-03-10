@@ -1,0 +1,6 @@
+@media (max-width: 600px){
+    /* 내부스타일 */
+    p {
+        background-color: red;
+    }
+}

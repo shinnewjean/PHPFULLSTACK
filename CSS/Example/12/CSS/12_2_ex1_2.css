@@ -1,0 +1,5 @@
+@media (min-width: 701px) and (max-width: 800px){
+    p {
+        background-color: orange;
+    }
+}

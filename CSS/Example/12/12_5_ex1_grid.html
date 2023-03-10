@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grib</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .grid_container {
+            /* width: 50vw;
+            height: 50vh; */
+            background-color: beige;
+            display: grid;
+            /* grid 레이아웃이 반응형에도 작동하게
+            새로운 단위 fr :부모요소에서의 퍼센트
+            각 열(가로)의 값 
+            repeat함수 */
+            /* grid-template-columns: 1fr 2fr 3fr; */
+            grid-template-columns: repeat(auto-fit,150px);
+            /* grid-template-columns: repeat(auto-fill,150px); */
+            /* grid-template-rows: minmax(100px,200px) minmax(100px,200px); */
+            /* grid-template: minmax(7,1fr), minmax(7,1fr); */
+            /* grid-gap:10px 20px ; */
+        }
+        
+        .grid_container2 {
+            /* width: 50vw;
+            height: 50vh; */
+            background-color: beige;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+        }
+        
+        
+        .grid_item {
+            background-color: darkorchid;
+        }
+        .grid_item:nth-child(odd){
+            background-color: darkorange;
+        }
+        .grid_item_1{
+            /* grid-column-start: 2 ; */
+            /* grid-column-end: 4 ; */
+            grid-column: 2/4;
+        }
+        .grid_item_4{
+            /* grid-row-start: 2 ; */
+            /* grid-row-end: 4 ; */
+            grid-row: 2/4;
+        }
+    </style>
+</head>
+<body>
+    <!-- .=div >=자식 $=숫자 -->
+    <!-- .grid_container>.grid_item($)*5 -->
+    <div class="grid_container">
+        <div class="grid_item_1">1</div>
+        <div class="grid_item">2</div>
+        <div class="grid_item">3</div>
+        <div class="grid_item_4">4</div>
+        <div class="grid_item">5</div>
+        <div class="grid_item">6</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">7</div>
+    </div>
+<br><br><br><br><br>
+    <div class="grid_container2">
+        <div class="grid_item">1</div>
+        <div class="grid_item">2</div>
+        <div class="grid_item">3</div>
+        <div class="grid_item">4</div>
+        <div class="grid_item">5</div>
+        <div class="grid_item">6</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">7</div>
+    </div>
+</body>
+</html>
