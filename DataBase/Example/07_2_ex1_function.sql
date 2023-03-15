@@ -2,6 +2,9 @@
 -- 	** 둘다 같은 기능을 합니다. **
 -- 	CAST( 값 AS 데이터형식 )
 -- 	CONVERT( 값, 데이터형식 )
+SELECT CAST( '1234' AS INT);
+SELECT CAST( '1234' AS CHAR(4));
+SELECT CONVERT( 1234, CHAR(4));
 
 -- 2. 제어 흐름 함수
 -- 	IF(수식, 참일 경우 결과, 거짓일 경우 결과) : 수식이 참 또는 거짓에 따라 결과를 분기합니다.
@@ -15,7 +18,25 @@
 -- 				WHEN 분기수식3 THEN 결과3
 -- 				ELSE 결과4
 -- 			END
-	
+SELECT IF(1<2, '참','거짓');
+SELECT emp_no, IF(emp_no=10001, 'first_name','last_name')
+FROM employees;
+
+SELECT IFNULL(NULL,'aa');
+-- NULL 비어있는값
+SELECT IFNULL('123','aa');
+SELECT IFNULL(' ','aa');
+
+SELECT NULLIF(1,2);
+
+SELECT emp_no,gender,
+			CASE gender
+				WHEN 'M' THEN '남자'
+				WHEN 'F' THEN '여자'
+				ELSE ' '
+			END
+FROM employees LIMIT 10;
+
 -- 3. 문자열 함수
 -- 	CONCAT(문자열1, 문자열2, ...) : 문자열을 이어줍니다.
 -- 	CONCAT_WS(구분자, 문자열1, 문자열2, ...) : 문자열 사이에 구분자를 넣어 이어줍니다.
