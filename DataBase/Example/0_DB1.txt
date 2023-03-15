@@ -1,7 +1,7 @@
 
 1. 데이터베이스(Database, DB)란? ( 참조 : 0_img1_WebDev.png )
 	다수의 사용자에 의해 공유되어 사용될 목적으로 통합하여 관리되는 "데이터의 집합"을 말합니다.
-
+ 
 2. DBMS란? ( 참조 : 0_img2_DBMS.PNG )
 	DBMS(DataBase Management System : 데이터베이스 관리 시스템)이란 데이터베이스를 관리하며
 	응용 프로그램들이 데이터베이스를 공유하며 사용할 수 있는 환경을 제공하는 소프트웨어입니다.
@@ -40,15 +40,13 @@
 	하지만 SQL을 사용하는 DBMS를 만드는 회사가 여러 곳이기 때문에 표준 SQL이 각 회사 제품의 특성을 모두 포용하지 못합니다.
 	그래서 DBMS를 만드는 회사에서는 되도록 표준 SQL을 준수하되, 각 제품의 특성을 반영한 SQL을 사용합니다.
 
-<strong>
-	7. 쿼리 문법의 종류
-		- DDL (Data Definition Language, 데이터 정의 언어) :
-			관계형 데이터베이스의 구조를 정의하는데 사용합니다.
-		- DML (Data Manipulation Language, 데이터 조작 언어) :
-			데이터베이스를 조작(검색, 등록, 삭제, 갱신)을 하기 위해 사용합니다.
-		- DCL (Data Control Language, 데이터 제어 언어) :
-			데이터베이스에서 데이터에 대한 액세스를 제어하기 위해 사용합니다.
-</strong>
+7. 쿼리 문법의 종류
+	- DDL (Data Definition Language, 데이터 정의 언어) :
+		관계형 데이터베이스의 구조를 정의하는데 사용합니다.
+	- DML (Data Manipulation Language, 데이터 조작 언어) : 
+		데이터베이스를 조작(검색, 등록, 삭제, 갱신)을 하기 위해 사용합니다.
+	- DCL (Data Control Language, 데이터 제어 언어) : 
+		데이터베이스에서 데이터에 대한 액세스를 제어하기 위해 사용합니다.
 	- TCL (Transaction Control Language, 트랜잭션 제어 언어) : 
 		논리적인 작업의 단위를 묶어서 DML에 의해 조작된 결과를 작업단위(트랜잭션) 별로 제어하기위해 사용합니다.
 
@@ -64,10 +62,9 @@
 		> sql 실행 : "source employees.sql;" 입력
 		> employees DB 확인 : show database;
 
-	- hediSQL autocommit설정 해제
-		> SELECT @@autocommit;
-		> SET @@autocommit:0;
-
+	- autocommit설정 해제
+		> mariaDB설치 위치 > data > my.ini
+			[mysqld]에 autocommit=0 추가
 
 **********************************
 ****** 이하 필요에 따라 참조 ******
