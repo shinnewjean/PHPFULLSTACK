@@ -37,6 +37,7 @@ FROM employees emp
 	INNER JOIN salaries salary
 		ON emp.emp_no = salary.emp_no
 WHERE salary.to_date>NOW()
+ORDER BY salary.salary DESC
 LIMIT 10;
 
 6. 각 부서의 부서장의 부서명, 풀네임, 입사일을 출력해 주세요.
