@@ -2,7 +2,7 @@
 -- 	** 둘다 같은 기능을 합니다. **
 -- 	CAST( 값 AS 데이터형식 )
 -- 	CONVERT( 값, 데이터형식 )
-SELECT CAST( 1234 AS CHAR(4) );
+SELECT CAST( 12345678 AS CHAR(4) );
 SELECT CONVERT( 1234, CHAR(4) );
 
 -- 2. 제어 흐름 함수
