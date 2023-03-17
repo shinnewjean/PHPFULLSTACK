@@ -149,7 +149,7 @@ FROM employees emp
 WHERE emp.gender='F'
 GROUP BY title.title;
 
-SELECT ti.title, COUNT(*)
+SELECT ti.title, COUNT(*) cnt
 FROM employees emp
 	INNER JOIN titles ti
 		ON emp.emp_no = ti.emp_no
