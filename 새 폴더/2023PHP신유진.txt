@@ -1,0 +1,19 @@
+23/03/14 mariaDB
+mariaDB PW root506
+
+UTF8 한글사용하기 때문에 필수
+
+ctrl+r cmd 관리자권한 실행
+
+heidsql
+SElect @@autocommit; 롤백 못하도록, 바로 커밋안되도록 설정하는값
+
+컨트롤 스페이스 포함된 단어검색
+; 여기서 질의 마무리 
+
+SELECT * 
+from titles
+WHERE emp_no = 10001
+;
+title폴더에서 eml_no 10001인 것만 빼오는것
+
