@@ -1,3 +1,7 @@
+<?php ?>
+
+
+
 <?php
 	$test = date('y-m-d h:i:s');
 	$cnt = 0;

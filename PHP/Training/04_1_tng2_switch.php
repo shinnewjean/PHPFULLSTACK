@@ -11,7 +11,7 @@
 
 // 출력 문구 : 당신의 점수는 xxx점 입니다. <등급>
 
-$score = 77;
+$score = 0;
 $text1 = "당신의 점수는";
 $text2 = "점 입니다.";
 
@@ -46,7 +46,7 @@ switch ($score) {
         echo "D! ".$text1.$score.$text2;
         break;
 
-    case $score < 60 && $score > 0:
+    case $score < 60 && $score >= 0:
         echo "F! ".$text1.$score.$text2;
         break;
 
