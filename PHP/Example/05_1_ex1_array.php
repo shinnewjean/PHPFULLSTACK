@@ -46,7 +46,7 @@
                         array(9,10,11,12)
                         )
                     );*/
-    //echo $arr1_temp[2][0][1];
+    // $arr1_temp[2][0][1];
     /*$arr1_temp3 = $arr1_temp[2][0];
     var_dump ($arr1_temp3[1]);
     echo ($arr1_temp3[1]);*/
@@ -55,11 +55,55 @@
     var_dump ($arr1_temp3);*/
 
     //배열의 원소 삭제 : unset()_배열의 특정 원소를 삭제
-    $arr_week = array("sun" , "mon" , "delete" , "tue" , "wed");
+    /*$arr_week = array("sun" , "mon" , "delete" , "tue" , "wed");
     unset($arr_week[2]);
-    print_r($arr_week);
+    print_r($arr_week);*/
     
+    //array_diff() : 배열중 중복되지않은 원소를 반환
+    //배열중 첫번째가 기준으로 입력됨
+    /*$arr_diff1 = array("a" , "b" , "c");
+    $arr_diff2 = array("a" , "b" , "d");
+    $arr_diff = array_diff($arr_diff1, $arr_diff2);
+    print_r($arr_diff);
+    
+    //배열의 정렬 : asort(), arsort(), ksort(), krsort()
+    //asort(); : 순방향 값 정렬
+    $arr_asort = array("b" , "a" , "d" , "c");
+    $arr_asort_result = asort($arr_asort);
+    print_r($arr_asort);
+    //arsort(); : 역방향 값 정렬
+    $arr_arsort = array("b" , "a" , "d" , "c");
+    $arr_arsort_result = arsort($arr_arsort);
+    print_r($arr_arsort);
+    //ksort(); : 순방향 키 정렬
+    $arr_ksort = array("key1" => "val1"
+                    ,"key3" => "val3"
+                    ,"key4" => "val4"
+                    ,"key2" => "val2");
+    print_r($arr_ksort);
+    //krsort(); : 역방향 키 정렬
+    $arr_krsort = array("key1" => "val1"
+                    ,"key3" => "val3"
+                    ,"key4" => "val4"
+                    ,"key2" => "val2");
+    print_r($arr_krsort);
+    echo count($arr_krsort);*/
 
-    
+    //foreach ($array as $key => $val ){}
+    //foreach ($array as $val ){}
+    $arr1 = array("key1" => "val1"
+                    ,"key3" => "val3"
+                    ,"key4" => "val4"
+                    ,"key2" => "val2"
+                );
+    foreach ($arr1 as $key => $val)
+    {
+        echo $key." : ".$val."\n";
+    }
+
+    /*foreach ($arr1 as $val)
+    {
+        echo $val."\n";
+    }*/
 
 ?>
