@@ -21,10 +21,10 @@
     var_dump($food_arr_ass);*/
 
     //키:김치원소를 삭제해 주세요
-    $arr_ass_del = array("된찌" => "파"
+    /*$arr_ass_del = array("된찌" => "파"
                         , "볶밥" => "양파" 
                         , "김치" => "마늘" 
-                        , "비빔" => "침기름");
+                        , "비빔" => "침기름");*/
     /*unset($arr_ass_del["김치"]);
     echo $arr_ass_del["김치"]."\n";
     print_r($arr_ass_del);*/
@@ -36,12 +36,14 @@
                         , "김치" => "마늘" 
                         , "비빔" => "침기름");
 
-    foreach ($arr_ass_foreach as $menu => $i) {
-    if ($i === "값값"){
-        unset ($menu);
+    foreach ($arr_ass_foreach as $menu => $i)
+    {
+        if ($menu === "삭제"){
+            unset ($arr_ass_foreach[$menu]);
+        }
+        else {
+            echo $menu." : ".$i."\n";
+        }
     }
-    else {
-        echo $menu." : ".$i."\n";
-    }
-
+    // print_r($arr_ass_foreach);
 ?>

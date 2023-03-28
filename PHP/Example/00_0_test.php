@@ -1,5 +1,13 @@
 <?php ?>
 
+ctrl + shift + L
+	같은단어 한꺼번에 바꾸기
+
+변수를 입힐 부분+ctrl + shift + P
+	부분 변수 입히기
+
+datetime != timestamp
+
 
 
 <?php
