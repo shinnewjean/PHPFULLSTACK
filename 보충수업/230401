@@ -274,4 +274,4 @@ while ($i <= 50) {
 }
 echo $result_sum;
 
-?>
+
