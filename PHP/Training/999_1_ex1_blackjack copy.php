@@ -7,85 +7,90 @@
 //2. 카드 합이 21을 초과하면 패배
 // 2-1. 유저 또는 딜러의 카드의 합이 21이 넘으면 결과 바로 출력
 //4. 카드의 계산은 아래의 규칙을 따른다.
-// 4-1.카드 2~10는 그 숫자대로 점수
-// 4-2. K·Q·J는 10점
+// 4-1.카드 2~9는 그 숫자대로 점수
+// 4-2. K·Q·J,10은 10점
 // 4-3. A는 1점 또는 11점 둘 중의 하나로 계산
 //5. 카드의 합이 같으면 다음의 규칙에 따름
 // 5-1. 카드수가 적은 쪽이 승리
-// 5-2. 카드수가 같을경우 스페이드>크로버>다이아>하트 순
+// 5-2. 카드수가 같을경우 비긴다.
 //6. 유저가 카드를 받을 때 딜러는 아래의 규칙을 따른다.
 // 6-1. 딜러는 카드의 합이 17보다 낮을 경우 카드를 더 받음
 // 6-2. 17 이상일 경우는 받지 않는다.
 //7. 1입력 : 카드 더받기, 2입력 : 카드비교, 0입력 : 게임종료
 //8. 한번 사용한 카드는 다시 쓸 수 없다.
-?>
 
-<?php
-// while(true) {
-// 	echo '시작';
-// 	print "\n";
-// 	fscanf(STDIN, "%d\n", $input);        
-// 	if($input === 0) {
-// 		break;
-// 	}
-// 	echo $input;
-// 	print "\n";
-// }
-// echo "끝!\n";
-
-//--------------설정
-// class Blackjack
-// {
-	
-// }
-
-
-$card = array("A","2","3","4","5","6","7","8","9","10","J","Q","K");
-$shape = array("♠","♣","♦","♥");
-shuffle($card); //배열 랜덤 정렬( shuffle, array_rand )
-shuffle($shape);
-echo $shape[0].$card[0];
-// echo array_rand($card);
-
-
-echo "\n\n--------------------------------------------\n\n";
-
-// 1입력 : 카드 더받기, 2입력 : 카드비교, 0입력 : 게임종료
-$userInt = 0;
-if ($userInt === 1)
+class BlackJack
 {
-	echo "카드더받기";
-}
-elseif ($userInt === 2) {
-	echo "카드비교";
-}
-elseif ($userInt === 0) {
-	echo "게임종료";
-}
+	// member variable : 멤버변수 설정
+	private $arr_cardNum; //private인 이유?
+	private $arr_cardShape;
+	private $arr_card;
+	// private $arr_userCard;
+	// private $arr_dealerCard;
+
+	// constructor : 멤버 변수의 값 설정
+	public function __construct() //__construct() : 클래스의 생성자
+	{
+		$this->arr_cardNum = array( "A" ,"2" ,"3" ,"4" ,"5" ,"6" ,"7" ,"8" ,"9" ,"10" ,"J" ,"Q" ,"K");
+		$this->arr_cardShape = array("♠" ,"♣" ,"♦" ,"♥");
+		$this->set_card();
+		// $this->arr_userCard();
+		// $this->arr_dealerCard();
+	}
+
+	// 모양+숫자 합친 카드 만들기(총 52개 여야함) 
+	private function set_card()
+	{
+		foreach( $this->arr_cardShape as $shape )
+		{
+			foreach( $this->arr_cardNum as $num )
+			{
+				echo $this->arr_card[] = array( $shape, $num);
+			}
+		}
+		// 카드 섞기
+		shuffle( $this->arr_card );
+		// var_dump ($this->arr_card);
+		
+	}
+
+	// public function debug() //밖으로 부르기 위해 퍼블릭 
+	// {
+	// }
 
 
-// 결과값 문구
-$cardsum = 4;
-if ( $cardsum > 21 ) 
-{
-	echo "\n----------YOU LOSE!!----------\n";
-	echo "\n당신은 ".$cardsum."점 이상으로 패배입니다.\n";
-	echo "\n------------------------------\n";
+	// // TODO : debug
+	// public function debug()
+	// {
+	// 	var_dump( $this->arr_deck );
+	// }
 }
-else if ( $cardsum === 21 )
-{
-	echo "\n**********YOU WIN!!**********\n";
-	echo "\n당신은 ".$cardsum."점으로 승리입니다.\n";
-	echo "\n*****************************\n";
-}
-else if ( $cardsum < 21 and $cardsum > 0 )
-{
-	echo "\n카드를 더 모아주세요.\n";
-}
+// $obj_bj = new BlackJack();
+// $obj_bj->debset_cardug();
 
 
-// $user1 = 
-// for ($i=0; $i < 13 ; $i++)
-// { 
-// 	echo $card[0];
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//while(true) {
+//	echo '시작';
+//	print "\n";
+//	fscanf(STDIN, "%d\n", $input);        
+//	if($input === 0) {
+//		break;
+//	}
+//	echo $input;
+//	print "\n";
+//}
+//echo "끝!\n";
