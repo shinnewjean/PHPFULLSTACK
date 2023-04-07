@@ -11,33 +11,6 @@
     // }
     // echo "끝!\n";
 
-class Blackjack
-{
-    //기본설정(카드,선수_딜러,플레이어 설정)
-    public $arr_cardNum = array( "A" ,"2" ,"3" ,"4" ,"5" ,"6" ,"7" ,"8" ,"9" ,"10" ,"J" ,"Q" ,"K");
-    public $arr_cardShape = array("♠" ,"♣" ,"♦" ,"♥");
-    public $arr_card = array(); //없어도되지만 가독성이 좋아진다
-    public $player = array();
-    public $dealer = array();
-    public $INTbuttonnum = 1;
-    public $playerNum = array();
-    public $playerShape = array();
-    public $dealerNum = array();
-    public $dealerShape = array();
-    //0_시작    1_스탠드 Stand(더이상 카드를 받지 않음)     2_히트 Hit(한 장 더)   3_버스트 Bust(21 초과)
-
-    //카드 52장 만들기
-    public function card()
-    {
-
-    } 
-
-}
-
-print Blackjack 
-
-
-
 
 //기본(카드,선수_딜러,플레이어 설정)
 		$arr_cardNum = array( "A" ,"2" ,"3" ,"4" ,"5" ,"6" ,"7" ,"8" ,"9" ,"10" ,"J" ,"Q" ,"K");
@@ -50,11 +23,6 @@ print Blackjack
         $playerShape = array();
         $dealerNum = array();
         $dealerShape = array();
-
-        public function __construct() //__construct() : 클래스의 생성자
-        {
-            
-        }
 
         foreach ( $arr_cardShape as $shape ) //카드조합 만들기
         {
@@ -184,9 +152,9 @@ print Blackjack
                         
                         
                         
-// class arrayCard
-// {
-// 	// member variable : 멤버변수 설정
+                        // class arrayCard
+                        // {
+                            // 	// member variable : 멤버변수 설정
 // 	public $arr_cardNum; //private인 이유?
 // 	public $arr_cardShape;
 // 	public $arr_card; //
