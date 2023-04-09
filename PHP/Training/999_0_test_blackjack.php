@@ -26,10 +26,24 @@ class Blackjack
     public $dealerShape = array();
     //0_시작    1_스탠드 Stand(더이상 카드를 받지 않음)     2_히트 Hit(한 장 더)   3_버스트 Bust(21 초과)
 
+    public function __construct()
+	{
+		$this->arr_card_num		= array( "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" );
+		$this->arr_card_shape	= array("♠" ,"♣" ,"♦" ,"♥");
+	}
+
     //카드 52장 만들기
     public function card()
     {
-
+        foreach ( $arr_cardShape as $shape ) //카드조합 만들기
+        {
+            foreach ( $arr_cardNum as $num ) 
+            {
+                $arr_card[]= $shape.$num; //$arr_card배열에 $shape.$num를 넣는다
+            }
+        }
+        shuffle($arr_card); //카드 섞기
+        // array_reverse($arr_card);
     } 
 
 }
