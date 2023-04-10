@@ -48,7 +48,7 @@ class Blackjack
 
 }
 
-print Blackjack 
+print Blackjack ;
 
 
 
@@ -65,10 +65,10 @@ print Blackjack
         $dealerNum = array();
         $dealerShape = array();
 
-        public function __construct() //__construct() : 클래스의 생성자
-        {
+        // public function __construct();//__construct() : 클래스의 생성자
+        // {
             
-        }
+        // }
 
         foreach ( $arr_cardShape as $shape ) //카드조합 만들기
         {
