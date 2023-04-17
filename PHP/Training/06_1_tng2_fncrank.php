@@ -164,6 +164,8 @@ echo $ifmax;
 
 
 
+
+
 // echo "최소값: " . $min;
 // echo "<br />\n";
 // echo "최대값: " . $max;
