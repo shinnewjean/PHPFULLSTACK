@@ -92,7 +92,7 @@
 
         <div class="petlist_list_container">
             <h1><?php echo $result_pet_info[0]['pet_name']; ?>의 TO DO LIST</h1>
-            <!-- **부분은 사용자 지정 이름으로 교체될 예정 -->
+            <!-- 사용자 지정 이름 -->
             <!-- <table> -->
                 <!-- <thead>
                     <tr>
