@@ -1,0 +1,26 @@
+CREATE DATABASE pet_todolist;
+USE pet_todolist;
+COMMIT;
+
+
+
+
+
+CREATE TABLE pet_list (
+	list_no INT PRIMARY KEY AUTO_INCREMENT
+	,list_title VARCHAR(100) NOT NULL
+	,list_contents VARCHAR(250) NULL
+	,list_start DATETIME NOT NULL
+	,list_end DATETIME NOT NULL
+	,list_comp_flg INT NOT NULL DEFAULT 0
+	,list_location VARCHAR(100) NULL
+);
+​
+CREATE TABLE pet_profile (
+	pet_no INT PRIMARY KEY
+	,pet_name VARCHAR(20) NOT NULL
+	,pet_birth DATE NOT NULL
+	,pet_gender ENUM('M','F') NOT NULL
+);
+​
+COMMIT;
