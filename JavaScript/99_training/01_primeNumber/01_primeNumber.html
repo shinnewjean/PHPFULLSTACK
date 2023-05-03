@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 100;
+        
+        // 1. 1~입력값의 요소를 가지는 배열을 만들어주세요.
+        // 2. 그 배열에서 소수만 찾아서 새로운 배열을 만들어 주세요.
+        // 3. 그 배열을 알러트로 출력해 주세요.
+        //    alert('경고')
+
+        // test = prompt("몇까지의 소수가 필요하신가요 ?","");
+        let numItem1 = [];
+        let maxNum = num;
+        let minNum = 1;
+
+        //-------------1~100까지-----------------
+        // for(i=minNum; i<=maxNum; i++){
+        //     numItem1.push(i)
+        // }
+
+        //-------------소수도전1-----------------
+        // for(i=minNum; i<=maxNum; i++){
+        //     if (for (a = minNum; a < i1; a--) 
+        //         {
+        //             numItem1.filter(a => i % a >= )
+        //         }
+        //         ) 
+        //     {
+        //         numItem1.push(i)
+        //     } else {
+                
+        //     }
+        //     for (a = minNum; a < i1; a--) {
+        //         numItem1.filter(a => i % a >= )
+        //     }
+        //     numItem1.push(i)
+        // }
+        // console.log(numItem1);
+
+        //-------------소수도전2-----------------
+        // function isPrime1(N) {
+        // // 1은 소수가 아니다.
+        // if (N === 1) return false;
+        // // 2부터 N-1까지의 수로 N을 나눴을 때
+        // for (let i = 2; i <= N - 1; i++) {
+        // // 나누어 떨어지는 경우가 한 번이라도 있으면 N은 소수가 아니다.
+        // if (N % 2 === 0) return false;
+        // }
+        // // 모두 나누어 떨어지지 않으면 N은 소수이다.
+        // return true;
+        // }
+
+        // function isPrime2(N) {
+        // // 1은 소수가 아니다.
+        // if (N === 1) return false;
+        // // 2부터 N제곱근까지의 수로 N을 나눴을 때
+        // for (let i = 2; i <= Math.sqrt(N); i++) {
+        // // 나누어 떨어지는 경우가 한 번이라도 있으면 N은 소수가 아니다.
+        // if (N % i === 0) return false;
+        // }
+        // // 모두 나누어 떨어지지 않으면 N은 소수이다.
+        // return true;
+        // }
+
+        //-------------1~100까지 함수로 소수 빼기-----------------
+        // for(i=minNum; i<=maxNum; i++){
+        // numItem1.push(i)
+        // }
+        // result = []
+        // for(i=minNum; i<=maxNum; i++){
+        //     numItem1.push(i)
+        //     if (console.log(isPrime2(numItem1[i])) === 'true' ) {
+        //         result.push(isPrime2(numItem1[i]))
+        //     }
+        // }
+
+        //--------------------------------------------------------
+        // let numItem1 = [];
+        // let maxNum = num;
+        // let minNum = 1;
+
+        n = maxNum;
+        
+        const isPrime = (n) => {                
+        const prime = {};
+
+        for (let i = 2; i <= Math.ceil(Math.sqrt(n)); i++) {
+        if (prime[n]) {
+        break;
+        }
+
+        if (prime[i]) {
+        continue;
+        }
+
+        for (let j = i ** 2; j <= n; j += i) {      
+            prime[j] = true;
+        }
+        }
+
+        return !prime[n];
+        }
+
+
+
+
+
+// console.log(result);
+
+// console.log(isPrime2(numItem1));
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+<!-- test = prompt("1부터 몇까지의 합을 구하실껀가요 ?","");
+sum = 0;
+
+for(i=0; i<=test; i++){
+	sum = sum + i;
+}
+
+document.write("sum="+sum); -->
+
+
+    <!-- <script src="./01_primeNumber.js"></script> -->
+</body>
+</html>
