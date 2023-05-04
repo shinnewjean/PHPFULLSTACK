@@ -10,15 +10,17 @@
 //     return a + b;
 // }
 
+// 화살표 함수 : 리턴값만 있는 경우 한줄로 표현 가능
+let test1 = () => "안녕";
+
+let add3 = ( a, b ) => a + b;
+
+// let add3 = (a,b) => a+b;
+
 // // 익명 함수
 // // function ( a , b ) {
 // //     return a + b;
 // // }
-
-// // 화살표 함수 : 리턴 값만 있는 경우 한줄로 표현 가능
-// let test1 = () => "안녕";
-
-// let add3 = (a,b) => a+b;
 
 // Function 생성자 함수
 let add4 = Function('a','b','return a + b;')
