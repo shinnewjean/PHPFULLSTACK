@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./41.css">
     <title>타이머 함수</title>
 </head>
 <body>
-    
+    <div class="nowtimmer">
+        <span>현재 시각 <span id="nowtime"></span></span>
+        <br>
+        <button id="stopbut" onclick="stopbut">멈추기</button>
+        <button id="restartbut" onclick="restartbut">재시작</button>
+    </div>
+
+    <div class="stopwatch">
+    <br>
+        <span>스톱워치</span>
+            <div id='box' class="box">
+                <div id='timerBox' class="timerBox">
+                    <div id="time" class="time">00:00:00</div>
+                </div>
+                <div class="btnBox">
+                    <i id="startbtn" class="fa fa-play" aria-hidden="true">1</i>
+                    <i id="pausebtn" class="fa fa-pause" aria-hidden="true">2</i>
+                    <i id="stopbtn" class="fa fa-stop" aria-hidden="true">3</i>
+                </div>
+            </div>
+    </div>
     <script src="./41_timer.js"></script>
 </body>
 </html>

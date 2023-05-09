@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+}
+.nowtimmer{
+    background-color: aliceblue;
+}
+.stopwatch{
+    background-color: whitesmoke;
+}
+.box{
+    width: 200px;
+    height: 200px;
+}
+.timerBox{
+    width: 200px;
+    outline: 2px solid black;
+}
+.timerBox .time{
+    font-size: 30pt;
+    color: #4C4C4C;
+    text-align: center;
+    font-family: sans-serif;
+}
+.btnBox{
+    margin: 20px auto;
+    text-align: center;
+}
+.btnBox .fa{
+    margin: 0px 5px;
+    font-size: 30pt;
+    color: #FAED7D;
+    cursor: pointer;
+}

@@ -50,6 +50,110 @@ let i = 1;
 //     }
 // },1000);
 
+//-------------현재 시각 오전 9:48:12 를 html로 표현하기-------------
+function fncnowtime() {
+const date = new Date();
+
+const hours = date.getHours();
+const minutes = date.getMinutes();
+const seconds = date.getSeconds();
+const milliseconds = date.getMilliseconds();
+
+// console.log('time: ' + date.toLocaleTimeString('ko-kr'));
+
+const timecon = date.toLocaleTimeString('ko-kr')
+
+let nowtime = document.getElementById('nowtime'); //변수담기
+nowtime.innerHTML = timecon; //html에 사용가능하게 만들기
+}
+
+let myInterval = setInterval(fncnowtime,1000);
+
+// 멈춤버튼
+function stopbut() {
+    const now = new Date();
+    document.getElementById('clock').innerHTML = now.toLocaleTimeString();
+}
+
+// 재시작 버튼
+
+//-------------스톱워치 만들기-------------
+var time = 0;
+var starFlag = true;
+$(document).ready(function(){
+  buttonEvt();
+});
+
+function init(){
+  document.getElementById("time").innerHTML = "00:00:00";
+}
+
+function buttonEvt(){
+  var hour = 0;
+  var min = 0;
+  var sec = 0;
+  var timer;
+
+  // start btn
+  $("#startbtn").click(function(){
+
+    if(starFlag){
+      $(".fa").css("color","#FAED7D")
+      this.style.color = "#4C4C4C";
+      starFlag = false;
+
+      if(time == 0){
+        init();
+      }
+
+      timer = setInterval(function(){
+        time++;
+
+        min = Math.floor(time/60);
+        hour = Math.floor(min/60);
+        sec = time%60;
+        min = min%60;
+
+        var th = hour;
+        var tm = min;
+        var ts = sec;
+        if(th<10){
+        th = "0" + hour;
+        }
+        if(tm < 10){
+        tm = "0" + min;
+        }
+        if(ts < 10){
+        ts = "0" + sec;
+        }
+
+        document.getElementById("time").innerHTML = th + ":" + tm + ":" + ts;
+      }, 1000);
+    }
+  });
+
+  // pause btn
+  $("#pausebtn").click(function(){
+    if(time != 0){
+      $(".fa").css("color","#FAED7D")
+      this.style.color = "#4C4C4C";
+      clearInterval(timer);
+      starFlag = true;
+    }
+  });
+
+  // stop btn
+  $("#stopbtn").click(function(){
+    if(time != 0){
+      $(".fa").css("color","#FAED7D")
+      this.style.color = "#4C4C4C";
+      clearInterval(timer);
+      starFlag = true;
+      time = 0;
+      init();
+    }
+  });
+}
 
 
 
