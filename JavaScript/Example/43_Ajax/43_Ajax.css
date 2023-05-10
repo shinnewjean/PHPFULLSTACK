@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.resizePic{ /*자바스크립트의 이미지 규격 조정 */
+    width: 200px;
+    height: 200px;
+}
+
+.mainCon{
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+#imgBox{
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+    background-color: azure;
+}
