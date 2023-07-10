@@ -40,3 +40,41 @@
     right: 0%;
     border-radius: 10px;
 }
+
+/* .startTransition {
+    opacity: 0;
+    transition: all 0.5s;
+}
+.endTransition {
+    opacity: 1;
+} */
+
+/* 등장 애니메이션 */
+/* 3개가 한 세트 */
+.modalTransition-enter-from {
+    opacity: 0;
+}
+.modalTransition-enter-active {
+    transition: all 2s;
+}
+.modalTransition-enter-to {
+    opacity: 1;
+}
+
+/* 퇴장 애니메이션 */
+/* 3개가 한 세트 */
+.modalTransition-leave-from {
+    opacity: 1;
+}
+.modalTransition-leave-active {
+    transition: all 1s;
+}
+.modalTransition-leave-to {
+    opacity: 0;
+}
+
+.discount{
+    background-color: rgb(205, 248, 255);
+    padding: 10px;
+    margin: 5px;
+}

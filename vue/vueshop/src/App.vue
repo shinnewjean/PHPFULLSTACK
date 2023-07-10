@@ -17,11 +17,46 @@
     <a>상품</a>
     <a>기타</a>
   </div> -->
+  <div class="discount" v-if="flg">
+    <p>지금 당장 구매하시면, {{ discountprice }}할인</p>
+  </div>
+  <button @click="hookTest = !hookTest">훅테스트</button>
+  {{ hookTest }}
 
-  <ProductList @openModal="modalFlg=true;" :modalFlg="modalFlg" :product="product" v-for="(product,i) in products" :key="i" />
+  <!-- 검색창 -->
+  <br>
+  <!-- <input type="text" @input="inputTest = $event.target.value"> -->
+  <input type="text" v-model="inputTest">
+  <br>
+  <span>{{ inputTest }}</span>
+  <br>
+
+  <ProductList 
+  @openModal="modalFlg=true; productNum=i" 
+  :modalFlg="modalFlg" 
+  :product="product" 
+  v-for="(product,i) in products" 
+  :key="i" />
 
   <!-- 모달 -->
-  <ModalView @closeModal="modalFlg=!modalFlg;" :modalFlg="modalFlg"/>
+  <!-- @plus="plus(productNum)"  -->
+  <!-- @minus="minus(productNum)"  -->
+  <!-- <div class="startTransition" :class="{endTransition : modalFlg}">
+    <ModalView 
+      @closeModal="modalFlg=!modalFlg;" 
+      :modalFlg="modalFlg" 
+      :productNum = "productNum" 
+      :product="products"
+    />
+  </div> -->
+  <Transition name="modalTransition">
+    <ModalView 
+      @closeModal="modalFlg=!modalFlg;" 
+      :modalFlg="modalFlg" 
+      :productNum = "productNum" 
+      :product="products"
+    />
+  </Transition>
 
   <!-- <div class="bg_bl" v-if="modalFlg">
     <div class="bg_wh">
@@ -119,6 +154,12 @@ export default {
 
   data() { // 데이터 바인딩
     return{
+      discountprice : 20,
+      flg: false,
+      hookTest: true,
+
+      inputTest:'',
+
       // import를 위해 사용
       products: data,
 
@@ -143,11 +184,35 @@ export default {
 
       // styleR: 'color:red', //css글자색 바꿀때
 
-      // modalFlg :false,
-      modalFlg :true,
+      modalFlg :false,
+      // modalFlg :true,
 
       navList:['홈','상품','기타리스트'],
 
+    }
+  },
+  
+  updated() {
+    this.flg = true;
+  },
+
+  mounted() {
+    setInterval(() => {
+      if (this.discountprice <= 0) {
+        this.discountprice=0;
+      } else {
+        this.discountprice--;
+      }
+      
+      }, 100) //1초마다 반복
+  },
+
+  watch: { // 실시간 감시 함수 정의 영역
+    inputTest(input) {
+      if( input == 3 ) {
+        alert('니는 3 을 입력한 것이여');
+        this.inputTest = '';
+      }
     }
   },
 
@@ -171,6 +236,12 @@ export default {
         this.products[i].acount=0;
       }
     },
+
+    // discountprice(i) { 
+    //   if (i>0) {
+    //     this.discountprice=0;
+    //   }
+    // },
 
     // totalprice(i) {
     //    ttprice = this.products[i].acount * this.products[i].price
