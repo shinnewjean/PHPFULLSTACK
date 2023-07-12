@@ -1,7 +1,8 @@
 // store 암묵적인 약속 : 데이터를 저장할때 모두 여기다가 저장함
 // 초기 데이터 created(옵션 API) 단계에 넣는
 import { createStore } from 'vuex'
-import axios from "axios";
+import axios from "axios";  // backend와 axios 통신을 위해 필요
+// import { filter } from 'core-js/core/array';
 
 const store = createStore({
     // 데이터를 저장하는 영역
@@ -14,6 +15,12 @@ const store = createStore({
             tabFlg: 0, // 탭 UI flg (0:main ,1:fillter ,2:write)
             imgUrl:'', // 이미지 url
             filter:'', // 필터명
+            imgFile:null, // 업로드시 이미지 파일로
+            content:'',
+
+            // data속성에서 추가되는 변수들
+            // uploadimageurl: [],    // 업로드한 이미지의 미리보기 기능을 위해 url 저장하는 객체
+            // imagecnt: 0,        // 업로드한 이미지 개수 => 제출버튼 클릭시 back서버와 axios 통신하게 되는데, 이 때 이 값도 넘겨줌
         }
     },
 
@@ -61,6 +68,22 @@ const store = createStore({
             state.filter = '';
             state.imgUrl = '';
         },
+
+        // 글 작성 이미지 업로드
+        changeImgFile(state ,imgFile) {
+            state.imgFile = imgFile;
+        },
+
+        // 글 작성 이미지 업로드
+        changeContent(state ,Content) {
+            state.Content = Content;
+        },
+
+        // 작성글 데이터 셋팅용
+        addWriteData(state ,data) {
+            state.boardData.unshift(data);
+            // this.commit('changeLastId', data.id)
+        },
     },
 
     // actions 에이젝스 비동기 처리등 시간이 오래걸리는 것...
@@ -78,6 +101,7 @@ const store = createStore({
             })
         },
 
+        // 게시글 추가 습득
         // 더보기 함수 axios이용하여 만들기
         getMoreList(context) {
                 // 'http://192.168.0.66/api/boards/2'
@@ -89,12 +113,39 @@ const store = createStore({
                     else{
                         context.state.addBtnFlg = false; // 더 사용할 곳이 없으므로 뮤테이션의 함수로 바꾸는것은 하지않음.
                         alert('더 표시할 게시물이 없습니다.');
-
                     }
                 })
                 .catch( err => {
                     console.log(err);
                 })
+        },
+
+        //게시글 작성
+        writeContent(context) {
+            let data = {
+                name: '신유진',
+                filter: context.state.filter,  // 100글자
+                img: context.state.imgFile,    // 500 error
+                content : context.state.content,  // 150글자
+            }
+            console.log(data);
+            const header = {
+                headers: {
+                    'Content-Type' : 'multipart/form-data',
+                }
+            }
+            
+            axios.post('http://192.168.0.66/api/boards',data,header)   // post사용이유 : REST API /사용 새로운 데이터를 사용 post /기존 데이터 갱신 update
+            .then(res => {
+                // 처리
+                // context.state.boardData.unshift(res.data);
+                context.commit('addWriteData', res.data );
+                context.commit('changeTabFlg','0');
+                // context.commit(clearState);
+            })
+            .catch( err => {
+                console.log(err);
+            })
         },
     },
 })

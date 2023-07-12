@@ -11,7 +11,7 @@
       <li v-if="$store.state.tabFlg != 0" @click="$store.commit('changeTabFlg',0); $store.commit('clearState');" class="header-button header-button-left">X</li>
       <li @click="$store.commit('changeTabFlg',0)"><img class="logo" alt="logo" src="./assets/instalogobl.png"></li>
       <li v-if="$store.state.tabFlg == 1" @click="$store.commit('changeTabFlg',2)" class="header-button header-button-right">다음</li>
-      <li v-if="$store.state.tabFlg == 2" @click="$store.commit('changeTabFlg',0)" class="header-button header-button-right">공유</li>
+      <li v-if="$store.state.tabFlg == 2" @click="$store.dispatch('writeContent'); $store.commit('changeTabFlg',0);" class="header-button header-button-right">공유</li>
     </ul>
   </div>
 
@@ -26,8 +26,13 @@
   <!-- 푸터 -->
   <div class="footer">
     <div v-if="$store.state.tabFlg == 0" class="footer-button-store">
-      <label for="file" class="label-store">+</label>
+      <!-- <p class="label-store">home</p> -->
+      <!-- <label for="" class="label-store">home</label>
+      <label for="" class="label-store">search</label> -->
+      <label for="file" class="label-store">+</label> <!-- // 유저편의성 CSS입히기 편해서 -->
       <input @change="updateImg" accept="image/*" type="file" id="file" class="input-file">
+      <!-- <label for="" class="label-store">reels</label>
+      <label for="" class="label-store">mypage</label> -->
     </div>
   </div>
 </template>
@@ -46,10 +51,13 @@ export default {
     updateImg(e) {
       let file = e.target.files;  // 이벤트가 발생했을때 파일 저장
       console.log(e);
-      console.log(e.target.value);
+      // console.log(e.target.value);
       let imgUrl = URL.createObjectURL(file[0]);
+      // let imgFile = URL.createObjectURL(file[0]);
+
       this.$store.commit('changeImgUrl' ,imgUrl);  // 뮤테이션 함수 
-      this.$store.commit('changeTabFlg' ,1);
+      this.$store.commit('changeTabFlg' ,1);  // 탭바꾸는
+      this.$store.commit('changeImgFile' ,file[0]); // 이미지 파일로
       e.target.value = '';
     }
   },

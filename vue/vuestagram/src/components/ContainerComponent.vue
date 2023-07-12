@@ -23,7 +23,9 @@
         <div class="upload-img" :class="$store.state.filter" :style="{backgroundImage : `url('${$store.state.imgUrl}')`}"></div>
         <!-- 글작성 -->
         <div>
-            <textarea class="write-box" name="content" id="content" placeholder="글을 입력해 주세요."></textarea>
+            <textarea class="write-box" v-model="$store.state.content" name="$store.state.Content" id="content" placeholder="글을 입력해 주세요."></textarea>
+            <!-- {{ $store.state.Content }} -->
+            <!-- :rules="[v => !!v || '제목은 필수입니다.']" -->
         </div>
     </div>
 </template>
